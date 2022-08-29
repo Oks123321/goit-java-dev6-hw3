@@ -4,6 +4,7 @@ SELECT projects_id, SUM (salary)
 FROM developers
 LEFT JOIN projects_developers ON developers.id = projects_developers.developers_id
 GROUP BY projects_id
+ORDER BY projects_id ASC
 ;
 UPDATE projects 
 	SET cost = 3000
